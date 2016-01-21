@@ -24,18 +24,18 @@ class OracleOfBacon
       @from == @to
   end
 
-  def initialize(api_key='')
+  def initialize(api_key='', to='Kevin Bacon', from='Kevin Bacon')
     @api_key = api_key
+    @to = to
+    @from = from
   end
   
   def from=(name)
     @from = name
-    @to ||= 'Kevin Bacon'
   end
   
   def to=(name)
     @to = name
-    @from ||= 'Kevin Bacon'
   end
 
   def find_connections
